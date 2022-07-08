@@ -28,14 +28,20 @@ const interestAmount = new FromSacInfo('Valor de Juros (%)','10%');
 const deadline = new FromSacInfo('Prazo (em meses)', '12');
 const fromInfo = [immobileValue, entryValue, interestAmount, deadline];
 
-// create element <H1>
-const titleH1 = document.body.appendChild(new CreateElement('text-center', 'h1'));
-titleH1.classList.add('mt-5');
-titleH1.textContent = 'Simulador de Financiamento com Sistema de Amortização Constante (SAC)';
+function creanteHeader() {
+    const header = document.body.appendChild(new CreateElement('container', 'header'));
+    header.classList.add('d-flex', 'justify-content-center', 'align-items-center', 'flex-column', 'mt-5');
+    const imgHeader = header.appendChild(new CreateElement('d-flex','img'));
+    imgHeader.src = './img/coin.png';
+    const titleH1 = header.appendChild(new CreateElement('text-center', 'h1'));
+    titleH1.classList.add('mt-2', 'text-secondary');
+    titleH1.textContent = 'Simulador de Financiamento com Sistema de Amortização Constante (SAC)';
+
+}
 
 function createFromSAC() {
     const form = document.body.appendChild(new CreateElement('container', 'form'));
-    form.classList.add('mt-5');
+    form.classList.add('mt-3');
 
     createFromFields(form);
     return form;
@@ -74,7 +80,7 @@ function createFromFields(element){
 
 function createButtonDropdown(element){
     const buttonDropdown = element.appendChild(new CreateElement('dropdown-toggle','button'));
-    buttonDropdown.classList.add('btn', 'btn-outline-secondary', 'dropdown-toggle', 'inline-block', 'w-50', 'dropdown-selection');
+    buttonDropdown.classList.add('btn','btn-secondary', 'btn-outline-info', 'dropdown-toggle', 'inline-block', 'w-50', 'dropdown-selection', 'text-white');
     buttonDropdown.setAttribute('data-bs-toggle', 'dropdown');
     buttonDropdown.setAttribute('aria-expanded', 'false');
     buttonDropdown.setAttribute('type','button');
@@ -99,6 +105,7 @@ function createListDropdownButton(element){
 
 }
 
+creanteHeader();
 // get return for function and call her (from and dropdownAndSubmit)
 const form = createFromSAC();
 const dropdownAndSubmit = creanteContrainerDropdownAndSubmitButton();

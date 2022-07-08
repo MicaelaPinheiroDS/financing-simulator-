@@ -1,4 +1,12 @@
-
+*{
+    border: none !important;
+}
+body{
+    background: #32b379;
+}
+button:hover{
+    transition: .7s;
+ }
 .container{
     max-width: 35rem;
     display: flex;
