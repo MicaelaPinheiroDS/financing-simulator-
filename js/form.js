@@ -13,7 +13,7 @@ class FromSacInfo {
     }
 }
 
-class CreateElement {
+export class CreateElement {
     #elementName;
     constructor(className, elementName){
         this.#elementName = document.createElement(elementName);
@@ -34,7 +34,7 @@ function creanteHeader() {
     const imgHeader = header.appendChild(new CreateElement('d-flex','img'));
     imgHeader.src = './img/coin.png';
     const titleH1 = header.appendChild(new CreateElement('text-center', 'h1'));
-    titleH1.classList.add('mt-2', 'text-secondary');
+    titleH1.classList.add('mt-2', 'text-white');
     titleH1.textContent = 'Simulador de Financiamento com Sistema de Amortização Constante (SAC)';
 
 }
@@ -63,7 +63,7 @@ function creanteContrainerDropdownAndSubmitButton(){
 
 function creanteSumitButton(){
     const fromSubmit = dropdownAndSubmit.appendChild(new CreateElement('btn-primary','button'));
-    fromSubmit.classList.add('btn','inline-block','w-50');
+    fromSubmit.classList.add('btn','inline-block','w-50','submit');
     fromSubmit.textContent = 'Calcula';
 }
 
