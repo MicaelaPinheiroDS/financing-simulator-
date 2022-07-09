@@ -1,8 +1,6 @@
-*{
-    border: none !important;
-}
+
 body{
-    background: #32b379;
+    background: #003980;
 }
 button:hover{
     transition: .7s;
