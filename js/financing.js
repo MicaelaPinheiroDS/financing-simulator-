@@ -1,4 +1,5 @@
 import { Installment } from "./installments.js";
+const table = document.querySelector('.table');
 const tBody = document.querySelector('.tbody');
 export class Financing {
     #interestRate;
@@ -28,6 +29,7 @@ export class Financing {
         }
     }
     showDeadline(){
+        table.style.display = '';
         const installments = this.#installments.slice(1);
         let line;
         let i = 0;
