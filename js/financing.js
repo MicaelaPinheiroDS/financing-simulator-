@@ -34,7 +34,7 @@ export class Financing {
         for(let installment of installments){
             if(i % 2 == 0){
                 line = tBody.insertRow(-1);
-                line.classList.add('bg-info');
+                line.style.background = '#004ead';
                 console.log(line);
             } else{
                 line = tBody.insertRow(-1);
