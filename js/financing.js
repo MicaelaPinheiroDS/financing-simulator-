@@ -48,4 +48,7 @@ export class Financing {
             i++;
         }
     }
+    getInstallments(){
+        return this.#installments
+    }
 }
