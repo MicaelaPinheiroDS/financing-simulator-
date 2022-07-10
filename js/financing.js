@@ -29,9 +29,16 @@ export class Financing {
     }
     showDeadline(){
         const installments = this.#installments.slice(1);
+        let line;
+        let i = 0;
         for(let installment of installments){
-            let i = 0;
-            const line = tBody.insertRow(-1);
+            if(i % 2 == 0){
+                line = tBody.insertRow(-1);
+                line.classList.add('bg-info');
+                console.log(line);
+            } else{
+                line = tBody.insertRow(-1);
+            }
             for(let data of installment.getDataFormatted()){
                 const cell = line.insertCell(-1);
                 cell.textContent = data;
