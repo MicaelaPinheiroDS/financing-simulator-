@@ -63,7 +63,8 @@ function creanteContrainerDropdownAndSubmitButton(){
 
 function creanteSumitButton(){
     const fromSubmit = dropdownAndSubmit.appendChild(new CreateElement('btn-primary','button'));
-    fromSubmit.classList.add('btn','inline-block','w-50','submit');
+    fromSubmit.classList.add('btn','inline-block','w-50','clac-button');
+    fromSubmit.setAttribute('type','button');
     fromSubmit.textContent = 'Calcula';
 }
 
@@ -74,6 +75,7 @@ function createFromFields(element){
         span.classList.add('bg-info', 'text-secondary', 'col','text-center', 'justify-content-center'); 
         span.textContent = fromInfo[i].getDataName();
         let formControl = label.appendChild(new CreateElement('form-control', 'input'));
+        formControl.classList.add('from-fields');
         formControl.setAttribute('placeholder', fromInfo[i].getDataPlaceholde());
     }
 }
