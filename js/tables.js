@@ -3,6 +3,7 @@ const divTable = new CreateElement('container','div');
 function creenteTable (){
     const table = divTable.appendChild(new CreateElement('table','table'));
     table.classList.add('table-bordered','text-white','border-secondary','mt-5');
+    table.style.display = "none";
     creanteTableHeader(table);
     creanteTBody(table);
 }
